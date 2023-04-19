@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    padding: 25px 40px;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    
+}
+
+p {
+    font-size: 25px;
+    padding: 10px 0 20px 0;
+}
+
+input {
+    padding: 10px;
+    margin: 5px 10px 10px 0;
+    display: flex; 
+    justify-content: space-evenly;
+    
+}
+
+legend {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: none; 
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+
+
