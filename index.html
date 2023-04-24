@@ -5,71 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <script src="javascript.js" defer></script>
+
     <title>Sign-up form</title>
 </head>
 <body>
-    <div class="container">
-
-        <!-- <div class="hammerImage"> 
-            <img src="hammer.jpg"></div>
-
-        <div class="logo"></div>
-        <div> -->
-            <!-- <h1>ODIN CLUB</h1>
-        </div> -->
-        <div>
-            <section class="paragraph">
-                <p>
-                    This is not a real online service...but I bet you wish it was, right?  
-                    What secrets lay hidden within?  Could it be everything you could possibly imagine? 
-                    This must be the place!
-                </p>
-                <p>
-                    Sign up now to find what you seek!
-                </p>
-            </section>
-        
-        <div>
-            <form action="#">
-                <div>
-                    <fieldset>
-                        <legend>Just a few details away..</legend>
-                            <label for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName" name="first_name" required />
-
-                            <label for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName" name="last_name" required />
-                    </fieldset>
-                </div>
-                <div>
-                    <fieldset>
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" required />
-
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone_number" />
-                    </fieldset>
-                </div>
-
-                <div>
-                    <fieldset>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password" required />
-
-                        <label for="confirmPassword">CONFIRM PASSWORD</label>
-                        <input type="password" id="confirmPassword" name="confirm_password" required />
-                    </fieldset>
-                </div>
-                <div>
-                    <button class="btn" type="submit">Enter the Unknown</button>
-                        <p>
-                            Already have an account? Log in
-                        </p>
-                </div>
-            </form>
+    <div class="image">
+        <div class="logo">
+            <img src="odin-lined.png" alt="odin-logo" class="odin-logo" />
+            <h1 class="odin-club">ODIN CLUB</h1>
         </div>
+        <div class="img-description">
+            <p class="image-info">Photo by ANIRUDH on Unsplash</p>
+            <a href="https://unsplash.com/photos/3esjG-nlgyk">
+                <p class="image-info"></p>
+            </a>
         </div>
     </div>
+        
+       
+        <div class="form">
+            <div class="paragraph">
+                <h1>
+                    This is not a real online service... but I bet you wish it was, right?<br>
+                    What secrets lay hidden within?  Could it be everything you could possibly imagine?<br>
+                    This <em>must</em> be the place!
+                </h1>
+                <h1>
+                    Sign up now... You <em>know</em> you want to!
+                </h1> 
+            </div>
+        
+        
+            <form action="">
+                    
+                <p class="asterisk">Fields marked with * are required</p>
+
+                    <div class="input-row">
+                        <div class="first-name">
+                            <label for="firstName">FIRST NAME*</label>
+                            <input type="text" id="firstName" name="first_name" placeholder="Jane" required />
+                        </div>
+                    
+                        <div class="last-name">
+                            <label for="lastName">LAST NAME*</label>
+                            <input type="text" id="lastName" name="last_name" placeholder="Doe" required />
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="email">
+                            <label for="email">EMAIL*</label>
+                            <input type="email" id="email" name="email" placeholder="joe@bloggs.com" required />
+                        </div>
+
+                        <div class="phone">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" name="phone_number" />
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="password">
+                            <label for="password">PASSWORD*</label>
+                            <input type="password" id="password" name="password" required />
+                        </div>
+                
+                        <div class="con-password">
+                            <label for="confirmPassword">CONFIRM PASSWORD*</label>
+                            <input type="password" id="confirmPassword" name="confirm_password" required />
+                        </div>
+                    </div>
+            </form>   
+
+                    <div>
+                        <button class="btn" type="submit">Enter the Unknown</button>
+                            <p class="login">Already have an account? <a href="#">Log in</a></p>
+                    </div>
+            
+        
+        </div>
     
 </body>
 </html>
