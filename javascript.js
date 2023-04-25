@@ -16,6 +16,7 @@ function checkInputs() {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const confirmPassValue = confirmPass.value.trim();
+    
 
     if (firstNameValue === '') {
         setErrorFor(firstName, "Please enter first name");
@@ -31,8 +32,8 @@ function checkInputs() {
 
     if (emailValue === '') {
         setErrorFor(email, "Please enter a valid email address");
-    // } else if (!isEmail(emailValue)) {
-    //     setErrorFor(email, "Email address not valid");
+    } else if (!checkEmail(emailValue)) {
+        setErrorFor(email, "Email is not valid");
     } else {
         setSuccessFor(email);
     }
@@ -68,6 +69,7 @@ function setSuccessFor(input) {
     control.className = 'control success';
 }
 
-// function isEmail(email) {
-//     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-// }
+function checkEmail() {
+    const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return pattern;
+}
