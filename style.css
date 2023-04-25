@@ -44,19 +44,13 @@ body {
 .form {
     width: 60%;
     margin: 0;
-    padding: 0;
     margin-top: 5%;
 }
 
-.form > * {
-    padding-left: 10%;
-    padding-right: 10%;
-}
-
-
-form {
+.inputs {
     padding-top: 3%;
     padding-bottom: 5%;
+    padding-left: 3%;
     width: 100%;
     margin-left: 0%;
     margin-top: 5%;
@@ -70,6 +64,7 @@ form {
     flex-direction: row;
     width: 50%;
     padding-top: 10px; 
+    
 }
 
 .input-row> :first-child {
@@ -79,31 +74,54 @@ form {
 input {
     font-size: 1.3rem;
     padding: 10px;
-    border-radius: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
     width: 20vw;
+    border: 1px solid grey;
     
 }
 
-input::after {
-    border: 1px solid blue;
-}
-
 input:focus {
-    background-color: rgba(211, 211, 211, 0.664);
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.425);
     box-shadow: 2px 2px 5px;
+    border: 2px solid rgba(0, 0, 255, 0.432);
 }
 
-input:invalid {
-    border: 2px solid rgba(255, 0, 0, 0.507);
+.control.success input {
+    border: 2px solid rgba(0, 128, 0, 0.466);
+    
 }
 
-input:valid {
-    border: 2px solid rgba(0, 128, 0, 0.527);
+.control.error input {
+    border: 2px solid rgba(255, 0, 0, 0.432);
+    
 }
 
+.control small {
+    visibility: hidden;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.control.error small {
+    visibility: visible;
+    color: red;
+}
+
+
+label {
+    margin-left: 5px;
+}
+
+
+.password-hint {
+    padding-top: 5px;
+}
 
 .paragraph {
     line-height: 3rem;
+    padding-left: 3%;
    
 }
 
@@ -112,9 +130,10 @@ input:valid {
 }
 
 .btn {
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-left: 3%;
     padding: 15px;
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 5px;
     background-color:rgb(231, 229, 189);
     box-shadow: 2px 2px 5px;
@@ -129,12 +148,12 @@ input:valid {
 
 .login {
     padding: 15px 0 10px 0;
+    margin-left: 3%;
 }
 
 .login> a:hover {
     color: blue;
 }
-
 
 .logo {
     width: 39%;
@@ -154,6 +173,7 @@ input:valid {
 .odin-logo {
     width: 20%;
 }
+
 
 
 

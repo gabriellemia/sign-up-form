@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+    <script src="javascript.js" defer></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
-
-    <script src="javascript.js" defer></script>
+    
 
     <title>Sign-up form</title>
 </head>
@@ -41,54 +40,62 @@
             </div>
         
         
-            <form action="">
-                    
-                <p class="asterisk">Fields marked with * are required</p>
+            <form id="form" action="">
+
+                <div class="inputs">
+
+                    <p class="asterisk">Fields marked with * are required</p>
 
                     <div class="input-row">
-                        <div class="first-name">
+                        <div class="control">
                             <label for="firstName">FIRST NAME*</label>
-                            <input type="text" id="firstName" name="first_name" placeholder="Jane" required />
+                            <input type="text" id="firstName" name="first_name" placeholder="Jane" />
+                            <small>Error Message</small>
                         </div>
                     
-                        <div class="last-name">
+                        <div class="control">
                             <label for="lastName">LAST NAME*</label>
-                            <input type="text" id="lastName" name="last_name" placeholder="Doe" required />
+                            <input type="text" id="lastName" name="last_name" placeholder="Doe" />
+                            <small>Error Message</small>
                         </div>
                     </div>
 
                     <div class="input-row">
-                        <div class="email">
+                        <div class="control">
                             <label for="email">EMAIL*</label>
-                            <input type="email" id="email" name="email" placeholder="joe@bloggs.com" required />
+                            <input type="email" id="email" name="email" placeholder="joe@bloggs.com" />
+                            <small>Error Message</small>
                         </div>
-
-                        <div class="phone">
+                        
+                        <div class="control">
                             <label for="phone">PHONE NUMBER</label>
                             <input type="tel" id="phone" name="phone_number" />
                         </div>
                     </div>
 
                     <div class="input-row">
-                        <div class="password">
+                        <div class="control">
                             <label for="password">PASSWORD*</label>
-                            <input type="password" id="password" name="password" required />
+                            <input type="password" id="password" name="password" placeholder="Must contain at least 8 characters" />
+                            <small>Error Message</small>
                         </div>
                 
-                        <div class="con-password">
+                        <div class="control">
                             <label for="confirmPassword">CONFIRM PASSWORD*</label>
-                            <input type="password" id="confirmPassword" name="confirm_password" required />
+                            <input type="password" id="confirmPassword" name="confirm_password" />
+                            <small>Error Message</small>
                         </div>
                     </div>
-            </form>   
+                </div>
 
                     <div>
                         <button class="btn" type="submit">Enter the Unknown</button>
                             <p class="login">Already have an account? <a href="#">Log in</a></p>
                     </div>
+            </form>
             
         
         </div>
-    
+        
 </body>
 </html>
