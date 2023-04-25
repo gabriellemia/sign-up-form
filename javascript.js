@@ -16,7 +16,7 @@ function checkInputs() {
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
     const confirmPassValue = confirmPass.value.trim();
-    
+    const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,}$/;
 
     if (firstNameValue === '') {
         setErrorFor(firstName, "Please enter first name");
@@ -32,7 +32,7 @@ function checkInputs() {
 
     if (emailValue === '') {
         setErrorFor(email, "Please enter a valid email address");
-    } else if (!checkEmail(emailValue)) {
+    } else if (!emailValue.match(pattern)) {
         setErrorFor(email, "Email is not valid");
     } else {
         setSuccessFor(email);
@@ -67,9 +67,4 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
     const control = input.parentElement;
     control.className = 'control success';
-}
-
-function checkEmail() {
-    const pattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    return pattern;
 }
